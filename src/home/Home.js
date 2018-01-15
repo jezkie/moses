@@ -87,8 +87,8 @@ class Home extends Component {
                       bordered
                       rounded
                       size='large'
-                      src={defaultImg}
-                    ></Image>
+                      src={defaultImg}>
+                    </Image>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

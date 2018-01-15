@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Menu, Container } from 'semantic-ui-react';
+import { ABOUT_MENUS } from '../const/menus'
 
 function mapStateToProps(state) {
     return {
@@ -14,14 +15,16 @@ class About extends Component {
             <div>
                 <Menu fixed='top' size='large'>
                     <Container>
-                        <Menu.Item as='a' active>PeopleFocus</Menu.Item>
-                        <Menu.Item as='a' active>Philosophy</Menu.Item>
-                        <Menu.Item as='a' active>Services</Menu.Item>
-                        <Menu.Item as='a' active>Location/ Offices</Menu.Item>
-                        <Menu.Item as='a' active>Blog</Menu.Item>
+                        {
+                            ABOUT_MENUS.map((item, i) => {
+                                return (
+                                    <Menu.Item as='a' active>{item.display}</Menu.Item>
+                                )
+                            })
+                        }
                     </Container>
                 </Menu>
-                { this.props.children }              
+                {this.props.children}
             </div>
         );
     }

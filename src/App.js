@@ -15,14 +15,15 @@ class App extends Component {
       <div>
         <Provider store={MosesStore}>
           <div>
-            <Route exact path='/' component={Home}/>
-            <Route path='/about' component={PeopleFocus}/>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/about' component={PeopleFocus} />
+            <Route path='/about/peopleFocus' component={PeopleFocus} />
           </div>
         </Provider>
-        <Footer/>
+        <Footer />
       </div>
-      
-      
+
+
     )
   }
 }
