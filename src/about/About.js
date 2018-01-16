@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Menu, Container } from 'semantic-ui-react';
-import { ABOUT_MENUS } from '../const/menus'
+import { ABOUT_MENUS } from '../const/menus';
+import { Link } from 'react-router-dom';
 
 function mapStateToProps(state) {
     return {
@@ -10,6 +11,9 @@ function mapStateToProps(state) {
 }
 
 class About extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
     render() {
         return (
             <div>
@@ -18,7 +22,10 @@ class About extends Component {
                         {
                             ABOUT_MENUS.map((item, i) => {
                                 return (
-                                    <Menu.Item as='a' active>{item.display}</Menu.Item>
+                                    <Menu.Item as={Link} to={item.link}
+                                        active={item.name === this.props.clickedMenu}
+                                        key={item.name}>{item.display}
+                                    </Menu.Item>
                                 )
                             })
                         }

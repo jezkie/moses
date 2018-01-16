@@ -5,7 +5,7 @@ import JoinUs from './JoinUs';
 
 const BenefitsOfMembers = () => {
     return (
-        <JoinUs>
+        <JoinUs clickedMenu='benefits'>
             <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>

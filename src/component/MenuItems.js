@@ -9,7 +9,11 @@ const MenuItem = () => {
         <Container>
             {MAIN_MENUS.map((item, i) => {
                 return (
-                    <Menu.Item as={Link} to={item.link}>{item.display}</Menu.Item>
+                    <Menu.Item active 
+                        as={Link} 
+                        to={item.link}>
+                            {item.display}
+                    </Menu.Item>
                 )
             })}
         </Container>

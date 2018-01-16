@@ -4,8 +4,9 @@ import { Grid, Segment, Header } from 'semantic-ui-react';
 import About from './About';
 
 const PeopleFocus = () => {
+  
     return (
-        <About>
+        <About clickedMenu='peopleFocus'>
             <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>

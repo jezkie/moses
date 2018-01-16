@@ -8,7 +8,7 @@ const populateMenus = (menus) => {
   return (
     menus.map((item, i) => {
       return (
-        <List.Item as={Link} to={item.link}>{item.display}</List.Item>
+        <List.Item as={Link} to={item.link} key={item.name}>{item.display}</List.Item>
       )
     })
 )}

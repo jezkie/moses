@@ -26,7 +26,7 @@ class Home extends Component {
       showFixedMenu = () => {
         this.setState({ visible: true });
       }
-    
+
       render() {
         const { visible } = this.state;
     
@@ -45,7 +45,7 @@ class Home extends Component {
                 vertical>
                 
                   <Menu inverted secondary size='large'>
-                    <MenuItems/>
+                    <MenuItems />
                   </Menu>
                 
                 <Container text>

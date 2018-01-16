@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Container } from 'semantic-ui-react';
 import { JOIN_MENUS } from '../const/menus'
+import { Link } from 'react-router-dom';
 
 class JoinUs extends Component {
     // constructor(props) {
@@ -15,7 +16,10 @@ class JoinUs extends Component {
                         {
                             JOIN_MENUS.map((item, i) => {
                                 return (
-                                    <Menu.Item as='a' active>{item.display}</Menu.Item>
+                                    <Menu.Item as={ Link } to={item.link} 
+                                        active={item.name === this.props.clickedMenu} 
+                                        key={item.name}>{item.display}
+                                    </Menu.Item>
                                 )
                             })
                         }
