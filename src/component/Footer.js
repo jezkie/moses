@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Container, Header, List } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import { ABOUT_MENUS, JOIN_MENUS, MEMBERS_MENUS, EMPLOYERS_MENUS } from '../const/menus';
 
@@ -7,11 +8,10 @@ const populateMenus = (menus) => {
   return (
     menus.map((item, i) => {
       return (
-        <List.Item as='a'>{item.display}</List.Item>
+        <List.Item as={Link} to={item.link}>{item.display}</List.Item>
       )
     })
-  )
-}
+)}
 
 const Footer = () => {
   return (

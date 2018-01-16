@@ -1,16 +1,16 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 
-import About from './About';
+import JoinUs from './JoinUs';
 
-const PeopleFocus = () => {
+const BenefitsOfMembers = () => {
     return (
-        <About>
+        <JoinUs>
             <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>
                 <Grid.Column width={8}>
-                  <Header as='h3' style={{ fontSize: '2em' }}>People Focus, At a glance</Header>
+                  <Header as='h3' style={{ fontSize: '2em' }}>Benefits Of a Members</Header>
                   <p style={{ fontSize: '1.33em' }}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -25,8 +25,8 @@ const PeopleFocus = () => {
               </Grid.Row>
             </Grid>
           </Segment>
-        </About>
+        </JoinUs>
     );
 };
 
-export default PeopleFocus;
+export default BenefitsOfMembers;
