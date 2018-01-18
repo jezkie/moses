@@ -8,6 +8,7 @@ import Footer from './component/Footer';
 
 import PeopleFocus from './about/PeopleFocus';
 import BenefitsOfMembers from './join/BenefitsOfMembers';
+import ApplyHere from './join/ApplyHere';
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path='/about/peopleFocus' component={PeopleFocus} />
             <Route exact path='/join' component={BenefitsOfMembers} />
             <Route path='/join/benefits' component={BenefitsOfMembers} />
+            <Route path='/join/apply' component={ApplyHere} />
           </div>
         </Provider>
         <Footer />
