@@ -41,6 +41,7 @@ class Home extends Component {
     
               <Segment
                 inverted
+                textAlign='center'
                 style={{ minHeight: 200, padding: '1em 0em' }}
                 vertical>
                 

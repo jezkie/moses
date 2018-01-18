@@ -129,20 +129,20 @@ class ApplyHere extends Component {
                         <Grid.Row>
                             <Grid.Column width={12}>
                                 <Step.Group attached='top'>
-                                    <Step active={1 === this.state.active} onClick={() => this.stepClickHandler(1)} disabled={this.isStepDisabled(1)}>
+                                    <Step active={1 === this.state.active} onClick={() => this.stepClickHandler(1)}>
                                         <Step.Content>
                                             <Step.Title>Personal Details</Step.Title>
                                             <Step.Description>This is the first step</Step.Description>
                                         </Step.Content>
                                     </Step>
-                                    <Step active={2 === this.state.active} onClick={() => this.stepClickHandler(2)} disabled={this.isStepDisabled(1)}>
+                                    <Step active={2 === this.state.active} onClick={() => this.stepClickHandler(2)}>
                                         <Step.Content>
                                             <Step.Title>Contacts</Step.Title>
                                             <Step.Description>This is the second step</Step.Description>
                                         </Step.Content>
 
                                     </Step>
-                                    <Step active={3 === this.state.active} disabled onClick={() => this.stepClickHandler(3)} disabled={this.isStepDisabled(3)}>
+                                    <Step active={3 === this.state.active} disabled onClick={() => this.stepClickHandler(3)}>
                                         <Step.Content>
                                             <Step.Title>Agreement</Step.Title>
                                             <Step.Description>This is the third step</Step.Description>

@@ -9,7 +9,7 @@ const BenefitsOfMembers = () => {
             <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>
-                <Grid.Column width={8}>
+                <Grid.Column width={12}>
                   <Header as='h3' style={{ fontSize: '2em' }}>Benefits Of a Members</Header>
                   <p style={{ fontSize: '1.33em' }}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

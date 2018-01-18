@@ -11,7 +11,8 @@ const MenuItem = () => {
                 return (
                     <Menu.Item active 
                         as={Link} 
-                        to={item.link}>
+                        to={item.link}
+                        key={i}>
                             {item.display}
                     </Menu.Item>
                 )
