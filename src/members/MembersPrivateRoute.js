@@ -5,7 +5,7 @@ import { fakeAuth } from './fakeAuth';
 class MembersPrivateRoute extends Component {
     render() {
         return (
-            <Route path={this.props.path} render={(props) => (
+            <Route exact={this.props.exact} path={this.props.path} render={(props) => (
                 fakeAuth.isAuthenticated ? (<this.props.component/>) : 
                 (<Redirect to={{pathname: '/members/login', state: {from: this.props.path}}}/>)
             )}/>

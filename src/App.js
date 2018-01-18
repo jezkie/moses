@@ -29,6 +29,7 @@ class App extends Component {
             <Route path='/join/benefits' component={BenefitsOfMembers} />
             <Route path='/join/apply' component={ApplyHere} />
             <Route path='/members/login' component={Login} />
+            <MembersPrivateRoute exact path='/members' component={Jobs}/>
             <MembersPrivateRoute path='/members/jobs' component={Jobs}/>
           </div>
         </Provider>
