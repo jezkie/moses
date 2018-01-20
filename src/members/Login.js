@@ -16,16 +16,16 @@ class Login extends Component {
         super(props);
         this.state = { redirectToReferer: false }
     }
-    login(){
+    login() {
         fakeAuth.authenticate(() => {
-            this.setState({redirectToReferer: true});
+            this.setState({ redirectToReferer: true });
         })
     }
     render() {
-        const { from } = this.props.location.state || {from: {pathname: '/'}}
+        const { from } = this.props.location.state || { from: { pathname: '/' } }
         const { redirectToReferer } = this.state;
         if (redirectToReferer) {
-            return (<Redirect to={from}/>)
+            return (<Redirect to={from} />)
         }
 
         return (
@@ -43,7 +43,7 @@ class Login extends Component {
                                 <Segment stacked>
                                     <Form.Input fluid icon='user' iconPosition='left' placeholder='User ID'></Form.Input>
                                     <Form.Input fluid icon='lock' iconPosition='left' placeholder='Password' type='password'></Form.Input>
-                                    <Button onClick={()=>this.login()}>Login</Button>
+                                    <Button onClick={() => this.login()}>Login</Button>
                                 </Segment>
                             </Form>
                         </Grid.Column>
