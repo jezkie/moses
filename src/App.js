@@ -11,6 +11,7 @@ import BenefitsOfMembers from './join/BenefitsOfMembers';
 import ApplyHere from './join/ApplyHere';
 import Login from './members/Login';
 import Jobs from './members/Jobs';
+import Profile from './members/Profile';
 
 import MembersPrivateRoute from './members/MembersPrivateRoute';
 
@@ -31,6 +32,7 @@ class App extends Component {
             <Route path='/members/login' component={Login} />
             <MembersPrivateRoute exact path='/members' component={Jobs}/>
             <MembersPrivateRoute path='/members/jobs' component={Jobs}/>
+            <MembersPrivateRoute path='/members/update' component={Profile}/>
           </div>
         </Provider>
         <Footer />
