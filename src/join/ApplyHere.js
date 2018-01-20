@@ -4,15 +4,10 @@ import { connect } from 'react-redux';
 import { Grid, Step, Form, Button, Segment } from 'semantic-ui-react';
 
 import JoinUs from './JoinUs';
+import PersonalDetailsForm from '../forms/personalDetails';
+import AgreementText from '../forms/agreementText';
+import ContactForm from '../forms/contact'
 
-const genderOptions = [
-    { key: 'm', text: 'Male', value: 'male' },
-    { key: 'f', text: 'Female', value: 'female' }
-]
-const maritalOptions = [
-    { key: 's', text: 'Single', value: 'S' },
-    { key: 'm', text: 'Married', value: 'M' }
-]
 function mapStateToProps(state) {
     return {
 
@@ -24,20 +19,7 @@ const PersonalDetails = ({ stepClickHandler }) => {
         <div>
             <h2>Personal Details</h2>
             <Form>
-                <Form.Group widths='equal'>
-                    <Form.Input fluid label='First Name' placeholder='First Name'></Form.Input>
-                    <Form.Input fluid label='Middle Name' placeholder='Middle Name'></Form.Input>
-                    <Form.Input fluid label='Last Name' placeholder='Last Name'></Form.Input>
-                </Form.Group>
-                <Form.Group widths='equal'>
-                    <Form.Input fluid label='Date of Birth' />
-                    <Form.Input fluid label='Age' />
-                    <Form.Select fluid label='Gender' options={genderOptions} placeholder='Gender' />
-                </Form.Group>
-                <Form.Group widths='equal'>
-                    <Form.Select fluid label='Marital Status' options={maritalOptions} placeholder='Marital Status' />
-                    <Form.Input fluid label='ID No' placeholder='ÍD No' />
-                </Form.Group>
+                <PersonalDetailsForm />
                 <Button floated='right' onClick={() => stepClickHandler(2)}>Next</Button>
             </Form>
         </div>
@@ -49,12 +31,7 @@ const Contacts = ({ stepClickHandler }) => {
         <div>
             <h2>Contacts</h2>
             <Form>
-                <Form.Group widths='equal'>
-                    <Form.Input fluid label='Mobile' placeholder='Mobile'></Form.Input>
-                    <Form.Input fluid label='Telephone' placeholder='Telephone'></Form.Input>
-                    <Form.Input fluid label='Email' placeholder='Email'></Form.Input>
-                </Form.Group>
-                <Form.TextArea label='Home Address' placeholder='Home Address' />
+                <ContactForm />
                 <Button floated='right' onClick={() => stepClickHandler(3)}>Next</Button>
             </Form>
         </div>
@@ -65,33 +42,7 @@ const Agreement = () => {
     return (
         <div>
             <h2>Agreement</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised
-                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+            <AgreementText />
             <Form>
                 <Form.Checkbox label='I agree to the Terms and Conditions'></Form.Checkbox>
                 <Button>Submit</Button>
